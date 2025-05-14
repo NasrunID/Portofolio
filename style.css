@@ -1,0 +1,353 @@
+:root {
+    --primary-color: #2563eb;
+    --text-color: #1f2937;
+    --bg-color: #ffffff;
+    --card-bg: #f8fafc;
+    --border-color: #e2e8f0;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-color);
+    line-height: 1.7;
+    background-color: var(--bg-color);
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  .hero {
+    text-align: center;
+    padding: 4rem 0 2rem;
+  }
+  
+  .profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--bg-color);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+  }
+  
+  .hero h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+  }
+  
+  .bio {
+    color: #64748b;
+    margin-bottom: 1rem;
+  }
+  
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .social-links a {
+    color: #64748b;
+    font-size: 1.25rem;
+    transition: color 0.2s;
+  }
+  
+  .social-links a:hover {
+    color: var(--primary-color);
+  }
+  
+  .main-nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem 0;
+    padding: 1rem;
+    background: var(--card-bg);
+    border-radius: 1rem;
+  }
+  
+  .nav-item {
+    text-decoration: none;
+    color: #64748b;
+    padding: 0.75rem 1.25rem;
+    border-radius: 0.5rem;
+    transition: all 0.2s;
+  }
+  
+  .nav-item:hover,
+  .nav-item.active {
+    background: var(--primary-color);
+    color: white;
+  }
+  
+  .section {
+    margin: 3rem 0;
+  }
+  
+  .section h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 24px;
+    color: #222;
+    font-weight: 700;
+    position: relative;
+  }
+  
+  .section h2::after {
+    content: "";
+    width: 60px;
+    height: 3px;
+    background-color: #0077cc;
+    display: block;
+    margin: 12px auto 0;
+    border-radius: 3px;
+  }
+  
+  
+  .content-card {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    border: 1px solid var(--border-color);
+  }
+  
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .project-card {
+    transition: transform 0.2s;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .project-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.75rem;
+  }
+  
+  .tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+  
+  .tech-stack span {
+    background: #e2e8f0;
+    color: #64748b;
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    font-size: 0.875rem;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 2rem 0;
+    color: #64748b;
+  }
+  
+  footer i {
+    color: #ef4444;
+  }
+  
+  @media (max-width: 640px) {
+    .container {
+      padding: 1rem;
+    }
+  
+    .main-nav {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  
+    .projects-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  /* Smooth transition for hover effects */
+  a,
+  .project-card,
+  .nav-item {
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Card shadow enhancement */
+  .content-card {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  }
+  
+  /* Section spacing improvement */
+  .section {
+    margin: 4rem 0;
+  }
+  
+  /* Footer refinement */
+  footer {
+    font-size: 0.9rem;
+    color: #94a3b8;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 1.5rem;
+  }
+  
+  /* Add hover underline effect for project titles */
+  .project-card h3:hover {
+    text-decoration: underline;
+  }
+  
+  .timeline {
+    position: relative;
+    padding: 20px 0;
+    margin: 40px auto;
+    max-width: 600px;
+  }
+  
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    top: 0;
+    height: 100%;
+    width: 2px;
+    background: linear-gradient(to bottom, #e5e7eb 0%, #dc2626 100%);
+  }
+  
+  .timeline-item {
+    position: relative;
+    margin-bottom: 40px;
+    padding-left: 40px;
+  }
+  
+  .timeline-dot {
+    position: absolute;
+    left: -2px;
+    top: 0;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #dc2626;
+    box-shadow: 0 0 0 4px rgba(220, 38, 38, 0.2);
+    transition: all 0.3s ease;
+  }
+  
+  .timeline-item:hover .timeline-dot {
+    transform: scale(1.2);
+    box-shadow: 0 0 0 6px rgba(220, 38, 38, 0.2);
+  }
+  
+  .timeline-content {
+    background: linear-gradient(145deg, #ffffff, #f3f4f6);
+    padding: 28px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid rgba(229, 231, 235, 0.5);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .timeline-item:hover .timeline-content {
+    transform: translateX(15px);
+    background: white;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  }
+  
+  .timeline-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: #dc2626;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .timeline-item:hover .timeline-content::before {
+    opacity: 1;
+  }
+  
+  .timeline-content h3 {
+    margin: 0;
+    font-size: 1.25rem;
+    color: #111827;
+    font-weight: 600;
+    letter-spacing: -0.025em;
+  }
+  
+  .timeline-period {
+    color: #6b7280;
+    font-size: 0.9rem;
+    margin: 10px 0;
+    font-weight: 500;
+  }
+  
+  .timeline-institution {
+    color: #374151;
+    font-size: 1.05rem;
+    margin: 0;
+    font-weight: 500;
+    display: inline-block;
+    padding: 4px 0;
+    position: relative;
+  }
+  
+  .timeline-institution::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #dc2626;
+    transition: width 0.3s ease;
+  }
+  
+  .timeline-item:hover .timeline-institution::after {
+    width: 100%;
+  }
+  
+  .timeline-location {
+    color: #6b7280;
+    font-size: 0.9rem;
+    margin: 6px 0;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  
+  .timeline-location::before {
+    content: '📍';
+    font-size: 0.9em;
+  }
+  
+  /* Elegant hover color */
+  .nav-item:hover,
+  .nav-item.active {
+    background: #1e40af;
+    color: white;
+  }
+  
+  /* Subtle background for body */
+  body {
+    background-color: #f9fafb;
+  }
